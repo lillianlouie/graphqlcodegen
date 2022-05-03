@@ -98,6 +98,9 @@ public class Codegen extends AbstractMojo {
 
 	@Parameter(property = "dgs.codegen.skip", defaultValue = "false", required = false)
 	private boolean skip;
+	
+	@Parameter(property = "includeImports")
+	private Map<String, String> includeImports;
 
 	private void verifySettings() {
 		if (isNull(packageName)) {
@@ -150,7 +153,8 @@ public class Codegen extends AbstractMojo {
 					maxProjectionDepth,
 					kotlinAllFieldsOptional,
 					snakeCaseConstantNames,
-					generateInterfaceSetters
+					generateInterfaceSetters,
+					includeImports
 				);
 
 			getLog().info(format("Codegen config: %n%s", config));
