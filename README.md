@@ -501,6 +501,28 @@ Example
 </includeEnumImports>
 ```
 
+## includeClassImports
+
+- Type: map<string,<string,string>>
+- Required: false
+
+```xml
+
+<includeClassImports>
+    <Validate>
+        <properties>
+            <group>validator.bla</group>
+        </properties>
+    </Validate>
+    <Classify>
+        <properties>
+            <level>classifier.bar</level>
+            <group>classifier.bla</group>
+        </properties>
+    </Classify>
+</includeClassImports>
+```
+
 # Usage
 
 Add the following to your pom files build/plugins section.
